@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:insta/constants.dart';
+import 'package:insta/view/screens/auth/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Insta Reel ',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor
       ),
-      home: const Text("hello"),
+      home: LoginScreen(),
     );
   }
 }
