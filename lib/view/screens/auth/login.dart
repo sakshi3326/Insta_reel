@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta/view/widgets/glitch.dart';
 
 import '../../widgets/text_input.dart';
 
@@ -15,7 +16,7 @@ class LoginScreen extends StatelessWidget {
         child : Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("InstaReel"),
+            GlithEffect(child: const Text("InstaReel" ,style: TextStyle(fontWeight: FontWeight.w900 , fontSize: 30),)),
             SizedBox(height: 30),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
