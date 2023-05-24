@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../model/user.dart';
+import '../view/screens/auth/login.dart';
+import '../view/screens/home.dart';
 
 
 
@@ -23,9 +25,38 @@ class AuthController extends GetxController{
 
   }
 
+  //User State Persistence
+
+
+  late Rx<User?> _user;
+  User get user => _user.value!;
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    super.onReady();
+    _user = Rx<User?>(FirebaseAuth.instance.currentUser);
+    _user.bindStream(FirebaseAuth.instance.authStateChanges());
+    ever(_user, _setInitialView);
+
+    //Rx - Observable Keyword - Continously Checking Variable Is Changing Or Not.
+  }
+
+  _setInitialView(User? user){
+    if(user == null){
+      Get.offAll(()=> LoginScreen());
+    }else{
+      Get.offAll(() => HomeScreen());
+    }
+  }
+
+
+
   void SignUp(
       String username, String email, String password, File? image) async {
     try {
+      print("IMAGE HERE");
+      print(image.toString() == '');
+      print("IMAGE HERE");
       if (username.isNotEmpty &&
           email.isNotEmpty &&
           password.isNotEmpty &&
@@ -53,6 +84,28 @@ class AuthController extends GetxController{
     String imageDwnUrl = await snapshot.ref.getDownloadURL();
     return imageDwnUrl;
   }
+
+  void login(String email, String password) async
+  {
+
+    try{
+      if(email.isNotEmpty && password.isNotEmpty){
+        await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
+      }else{
+        Get.snackbar("Error Logging In", "Please enter all the fields");
+      }
+
+
+    }catch(e){
+      Get.snackbar("Error Logging In",e.toString());
+    }
+  }
+
+  signOut(){
+    FirebaseAuth.instance.signOut();
+    Get.offAll(LoginScreen());
+  }
+
 
 }
 
