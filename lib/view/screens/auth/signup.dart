@@ -27,6 +27,7 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(height: 25,),
               InkWell(
                 onTap: () {
+                  AuthController.instance.pickImage();
 
                 },
                 child: Stack(
@@ -83,7 +84,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               SizedBox(height: 30,),
               ElevatedButton(onPressed: (){
-                AuthController().SignUp(_usernameController.text, _emailController.text,_setpasswordController.text, AuthController().profimg);
+                AuthController.instance.SignUp(_usernameController.text, _emailController.text,_setpasswordController.text, AuthController.instance.profimg);
 
               }, child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 50 , vertical: 10),
