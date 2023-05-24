@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insta/view/widgets/glitch.dart';
 
+import '../../../controller/auth_controller.dart';
 import '../../widgets/text_input.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -82,7 +83,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               SizedBox(height: 30,),
               ElevatedButton(onPressed: (){
-
+                AuthController().SignUp(_usernameController.text, _emailController.text,_setpasswordController.text, AuthController().profimg);
 
               }, child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 50 , vertical: 10),

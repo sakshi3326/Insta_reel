@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class User{
+class myUser{
   String name;
   String profilePhoto;
   String email;
   String uid;
 
-  User(
+  myUser(
       {
         required this.name,
         required this.email,
@@ -25,10 +25,10 @@ class User{
 
 
   //Firebase(Map) - App(User)
-  static User fromSnap( DocumentSnapshot snap){
+  static myUser fromSnap( DocumentSnapshot snap){
 
     var snapshot = snap.data() as Map<String , dynamic>;
-    return User(
+    return myUser(
         email: snapshot['email'],
         profilePhoto: snapshot["profilePic"],
         uid: snapshot["uid"],
