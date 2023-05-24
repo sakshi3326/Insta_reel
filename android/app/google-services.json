@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "741916064392",
+    "project_id": "instareel-afb6b",
+    "storage_bucket": "instareel-afb6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741916064392:android:ac1eb9d651227c3311bd3d",
+        "android_client_info": {
+          "package_name": "com.example.insta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741916064392-s0g239qg0c942h6v6nnll5bsdacf88sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeg613MNjrV1NISgddqrpoV7i8NFzgPh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741916064392-s0g239qg0c942h6v6nnll5bsdacf88sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
