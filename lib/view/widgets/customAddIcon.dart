@@ -5,7 +5,8 @@ class customAddIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      width: 45,
       height: 30,
       child: Stack(
         children: [

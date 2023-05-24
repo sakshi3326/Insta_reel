@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../constants.dart';
 import '../widgets/customAddIcon.dart';
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+   HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int pageIdx =0;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +20,12 @@ class HomeScreen extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         backgroundColor: backgroundColor,
         onTap: (index){
+          setState(() {
+            pageIdx = index;
+          });
 
         },
-
+        currentIndex: pageIdx,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home, size: 25),
@@ -47,6 +57,10 @@ class HomeScreen extends StatelessWidget {
 
           ),
         ],
+      ),
+
+      body: Center(
+        child: Text(pageindex[pageIdx]),
       ),
 
 
