@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 import '../../constants.dart';
+import 'addcaption_screen.dart';
 class addVideoScreen extends StatelessWidget {
    addVideoScreen({Key? key}) : super(key: key);
   videoPick(ImageSource src , BuildContext context) async{
