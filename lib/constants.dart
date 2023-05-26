@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:insta/view/screens/add_video.dart';
 
 // getRandomColor() => Colors.primaries[Random().nextInt(Colors.primaries.length)];
 
@@ -15,10 +16,10 @@ const backgroundColor = Colors.black;
 var buttonColor = Colors.red[400];
 const borderColor = Colors.grey;
 
-const pageindex = [
-  'Home',
-  'Search',
-  'Upload video',
-  'Messages',
-  'Profile'
+var pageindex = [
+  Text('Home'),
+  Text('Search'),
+  addVideoScreen(),
+  Text('Messages'),
+  Text('Profile')
 ];
