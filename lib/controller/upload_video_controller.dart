@@ -6,6 +6,7 @@ import 'package:uuid/uuid.dart';
 import 'package:video_compress/video_compress.dart';
 import 'dart:io';
 
+import '../model/video.dart';
 import '../view/screens/home.dart';
 
 
@@ -45,7 +46,20 @@ class VideoUploadController extends GetxController{
 
       String thumbnail  = await   _uploadVideoThumbToStorage(id , videoPath);
 
-      
+      print((userDoc.data()! as Map<String , dynamic>).toString());
+      Video video = Video(
+          uid: uid,
+          username: (userDoc.data()! as Map<String , dynamic>)['name'],
+          videoUrl: videoUrl,
+          thumbnail: thumbnail,
+          songName: songName,
+          shareCount: 0,
+          commentsCount: 0,
+          likes: [],
+          profilePic: (userDoc.data()! as Map<String , dynamic>)['profilePic'],
+          caption: caption,
+          id: id
+      );
       await FirebaseFirestore.instance.collection("videos").doc(id).set(video.toJson());
       Get.snackbar("Video Uploaded Successfully", "Thank You Sharing Your Content");
       Get.to(HomeScreen());

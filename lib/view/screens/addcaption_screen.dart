@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../constants.dart';
+import '../../controller/upload_video_controller.dart';
 import '../widgets/text_input.dart';
 
 class addCaption_Screen extends StatefulWidget {
