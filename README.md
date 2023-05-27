@@ -1,5 +1,6 @@
 This is a Flutter application, where we can upload videos or reels. 
 Can comment, and like the videos just like intagram and tiktok.
+Can also like the comments
 
 Steps to use this app.
 Create account using email and password and profile pic.
