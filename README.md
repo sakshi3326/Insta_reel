@@ -1,16 +1,12 @@
-# insta
+This is a Flutter application, where we can upload videos or reels. 
+Can comment, and like the videos just like intagram and tiktok.
 
-A new Flutter project.
+Steps to use this app.
+Create account using email and password and profile pic.
+Select plus icon in the navigation bar.
+shoot video using camera option or upload a video directly from gallery.
+Add music name and caption.
+And wait for few seconds or minutes untill the video gets uploaded.
+You can see the videos uploaded by you on home screen and in your profile section too.
+In the home screen all the other videos uploaded by others will be visible.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
