@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insta/controller/auth_controller.dart';
+import 'package:insta/view/screens/auth/signup.dart';
 import 'package:insta/view/widgets/glitch.dart';
 
 import '../../widgets/text_input.dart';
@@ -45,7 +46,10 @@ class LoginScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 50 , vertical: 10),
 
                 child: Text("Login"))),
+            TextButton(onPressed: (){
 
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+            }, child: Text("New User ? Click Here"))
           ],
         ),
 
